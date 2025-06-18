@@ -1,0 +1,24 @@
+@font-face {
+    font-family: TS;
+    src: url(fonts/TS\ Block\ Bold.ttf);
+}
+
+@font-face {
+    font-family: sf-pro-regular;
+    src: url(fonts/SF-Pro-Display-Regular.otf);
+}
+
+@font-face {
+    font-family: sf-pro-medium;
+    src: url(fonts/SF-Pro-Display-Medium.otf);
+}
+
+@font-face {
+    font-family: sf-pro-bold;
+    src: url(fonts/SF-Pro-Display-Bold.otf);
+}
+
+@font-face {
+    font-family: sf-pro-black;
+    src: url(fonts/SF-Pro-Display-Black.otf);
+}

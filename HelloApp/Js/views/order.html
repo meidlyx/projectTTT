@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заявка — HABITZ</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="styles/font.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;700;900&display=swap">
+    <style>
+        .form-page-header {
+        padding: 20px 40px;
+        background-color: #0B0F1A;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        .form-page-logo {
+        font-family: 'sf-pro-bold', sans-serif;
+        font-size: 24px;
+        color: #ffffff;
+        text-decoration: none;
+        }
+
+        .form-page-nav {
+        display: flex;
+        gap: 20px;
+        }
+
+        .form-page-nav a {
+        color: #aaa;
+        text-decoration: none;
+        font-family: 'sf-pro-regular', sans-serif;
+        font-size: 16px;
+        }
+
+        .form-page-nav a:hover {
+        color: #fff;
+        }
+
+        .form-page-wrapper {
+        background-color: #0B0F1A;
+        min-height: 100vh;
+        padding: 60px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .form-page-container {
+        background-color: #12141C;
+        padding: 40px;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 500px;
+        box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
+        }
+
+        .form-page-title {
+        font-family: 'sf-pro-bold', sans-serif;
+        font-size: 28px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 30px;
+        }
+
+        .form-page-label {
+        font-family: sf-pro-medium;
+        font-size: 14px;
+        color: #c5c5c5;
+        display: block;
+        margin-bottom: 8px;
+        }
+
+        .form-page-input,
+        .form-page-select,
+        .form-page-textarea {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 14px;
+        font-family: sf-pro-regular;
+        background-color: #1B1F2E;
+        color: #ffffff;
+        border: 1px solid #2A2D3A;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        transition: 0.3s;
+        }
+
+        .form-page-input:focus,
+        .form-page-select:focus,
+        .form-page-textarea:focus {
+        border-color: #7C3AED;
+        outline: none;
+        box-shadow: 0 0 8px rgba(124, 58, 237, 0.4);
+        }
+
+        .form-page-button {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        font-family: sf-pro-bold;
+        background-color: #7C3AED;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+        }
+
+        .form-page-button:hover {
+        background-color: #6B21A8;
+        box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
+        }
+
+        .form-page-back {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        font-family: 'sf-pro-medium', sans-serif;
+        color: #aaa;
+        text-decoration: underline;
+        }
+
+        .form-page-back:hover {
+        color: #fff;
+        }
+    </style>
+    </head>
+    <body>
+    <header>
+        <div style="font-size: 24px; font-weight: bold; font-family: TS; color: #A78BFA;">HABITZ</div>
+        <nav>
+        <a href="#">Услуги и Цены</a>
+        <a href="#">Контакты</a>
+        </nav>
+    </header>
+
+    <main class="form-page-wrapper">
+        <div class="form-page-container">
+        <h1 class="form-page-title">Оставить заявку</h1>
+        <form action="#" method="POST">
+            <label class="form-page-label" for="name">Имя</label>
+            <input class="form-page-input" type="text" id="name" name="name" placeholder="Иван" required>
+
+            <label class="form-page-label" for="device">Устройство</label>
+            <select class="form-page-select" id="device" name="device" required>
+            <option disabled selected>Выберите устройство</option>
+            <option>iPhone</option>
+            <option>iPad</option>
+            <option>MacBook</option>
+            <option>Другое</option>
+            </select>
+
+            <label class="form-page-label" for="model">Модель</label>
+            <textarea class="form-page-select" id="model-device" name="model-device" placeholder="iPhone 14 Pro" rows="1" required></textarea>
+
+            <label class="form-page-label" for="phone">Телефон</label>
+            <input class="form-page-input" type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+
+            <label class="form-page-label" for="problem">Описание проблемы</label>
+            <textarea class="form-page-textarea" id="problem" name="problem" placeholder="Что случилось?" rows="4" required></textarea>
+
+            <label class="form-page-label" for="email">Email (необязательно)</label>
+            <input class="form-page-input" type="email" id="email" name="email" placeholder="example@mail.com">
+
+            <button class="form-page-button" type="submit">🚀 Отправить заявку</button>
+        </form>
+        <a class="form-page-back" href="index.html">← Вернуться на главную</a>
+        </div>
+    </main>
+</body>
+</html>
