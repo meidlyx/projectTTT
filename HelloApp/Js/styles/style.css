@@ -37,7 +37,7 @@ body {
     margin: 0;
     font-family: sf-pro-regular;
     background-color: #0B0F1A;
-    color: #fbe4d8;
+    color: #F2F4F8;
 }
 body p {
     font-family: sf-pro-regular;
@@ -54,7 +54,7 @@ header {
 nav a {
     margin-left: 24px;
     text-decoration: none;
-    color: #fbe4d8;
+    color: #ffffff;
     font-size: 14px;
     transition: 0.3s;
 }
@@ -83,7 +83,7 @@ nav a:hover {
         padding: 12px 28px;
         background: linear-gradient(270deg, #8f5eff, #ff3cac, #2c1f54, #8f5eff);
         background-size: 300% 300%;
-        color: #fbe4d8;
+        color: #fff;
         text-decoration: none;
         font-weight: bold;
         border-radius: 10px;
@@ -107,16 +107,6 @@ nav a:hover {
     }
 }
 
-
-.header-main {
-    background-color: #190019;
-    width: 100%;
-    height: 100%;
-}
-.uslugi {
-    background-color: #190019;
-}
-
 .hero {
     text-align: center;
     padding: 100px 20px;
@@ -127,12 +117,12 @@ nav a:hover {
 }
 .hero p {
     font-size: 18px;
-    color: #fbe4d8;
+    color: #666;
     margin-bottom: 32px;
 }
 .btn-blue {
-    background-color: #522b5b;
-    color: #fbe4d8;
+    background-color: #1E2230;
+    color: #ffffff;
     padding: 16px 32px;
     font-size: 16px;
     border: none;
@@ -148,7 +138,7 @@ nav a:hover {
     padding: 0 20px 80px;
 }
 .card {
-    background-color: #2b124c;
+    background-color: #12141C;
     padding: 24px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -161,7 +151,7 @@ nav a:hover {
 }
 .card p {
     font-size: 14px;
-    color: #fbe4d8;
+    color: #666;
 }
 
 /* Table */
@@ -176,7 +166,7 @@ nav a:hover {
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #2b124c;
+    background-color: #12141C;
     border-radius: 20px;
 }
 th,td {
@@ -189,7 +179,7 @@ thead {
     pointer-events: none;
 }
 tr:hover {
-    background-color: #522b5b;
+    background-color: #A78BFA;
 }
 
 footer {
