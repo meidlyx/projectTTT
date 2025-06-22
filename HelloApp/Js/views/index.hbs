@@ -13,7 +13,7 @@
   <section class="hero">
     <h1>Быстрый ремонт устройств Apple</h1>
     <p>от 500 ₽ · от 20 минут · бесплатная диагностика</p>
-    <a href="#" class="btn-black">Посмотреть услуги</a>
+    <a href="#" class="btn-black" onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth'})">Посмотреть услуги</a>
   </section>
 
   <section class="grid">
@@ -29,7 +29,73 @@
       <h3>От 20 минут</h3>
       <p>Срочный ремонт при вас в течение часа.</p>
     </div>
-  </section>
+  </section>  
+
+  <p style="text-align: center; font-size: 42px;" id="services">Сколько стоит ремонт устройств Apple в г.<span style="color: #A78BFA; cursor: pointer; font-family: sf-pro-bold;"> Екатеринбург</span>?</p>
+  <div class="table-service">
+    <table>
+      <thead>
+        <tr>
+          <th>Услуга</th>
+          <th>Цена</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Диагностика</td>
+          <td>Беслпатно</td>
+        </tr>
+        <tr>
+          <td>Замена аккумулятора</td>
+          <td>от 590 ₽</td>
+        </tr>
+        <tr>
+          <td>Замена экрана</td>
+          <td>от 890 ₽</td>
+        </tr>
+        <tr>
+          <td>Замена стекла</td>
+          <td>от 690 ₽</td>
+        </tr>
+        <tr>
+          <td>Защита гидрогелевой пленкой</td>
+          <td>от 1 290 ₽</td>
+        </tr>
+        <tr>
+          <td>Замена задней крышки</td>
+          <td>от 590 ₽</td>
+        </tr>
+        <tr>
+          <td>Чистка динамика, микрофонов от пыли</td>
+          <td>от 590 ₽</td>
+        </tr>
+        <tr>
+          <td>Замена корпуса</td>
+          <td>от 590 ₽</td>
+        </tr>
+        <tr>
+          <td>Замена разъема зарядки</td>
+          <td>от 490 ₽</td>
+        </tr>
+        <tr>
+          <td>Замена динамика</td>
+          <td>от 490 ₽</td>
+        </tr>
+        <tr>
+          <td>Замена микрофона</td>
+          <td>от 490 ₽</td>
+        </tr>
+        <tr>
+          <td>Замена задней камеры</td>
+          <td>от 590 ₽</td>
+        </tr>
+        <tr>
+          <td>Ремонт FACE ID</td>
+          <td>Цена по запросу</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <footer>
     <a href="err">Перейти к тесту ошибки</a>
