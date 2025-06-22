@@ -16,6 +16,7 @@ app.set ('views', 'views')
 
 
 app.use(express.static("styles"))
+app.use(express.urlencoded({extended: true}))
 
 app.use('/',indexRoutes);
 app.use('/order',orderRoutes);
