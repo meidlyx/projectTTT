@@ -29,10 +29,6 @@ button {
     }
 }
 
-img {
-    pointer-events: none;
-}
-
 body {
     margin: 0;
     font-family: sf-pro-regular;
@@ -43,7 +39,7 @@ body p {
     font-family: sf-pro-regular;
 }
 header {
-    max-width: 1140px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 24px;
     display: flex;
@@ -55,7 +51,7 @@ nav a {
     margin-left: 24px;
     text-decoration: none;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 18px;
     transition: 0.3s;
 }
 nav a:hover {
@@ -78,7 +74,7 @@ nav a:hover {
 } */
 
 .btn-black { 
-            display: inline-block;
+        display: inline-block;
         margin-top: 30px;
         padding: 12px 28px;
         background: linear-gradient(270deg, #8f5eff, #ff3cac, #2c1f54, #8f5eff);
@@ -90,6 +86,7 @@ nav a:hover {
         transition: 0.3s ease;
         animation: gradientFlow 5s ease infinite;
         box-shadow: 0 0 12px rgba(143, 94, 255, 0.6);
+        font-size: 20px;
 }
 .btn-black:hover {
     filter: brightness(1.2);
@@ -112,11 +109,11 @@ nav a:hover {
     padding: 100px 20px;
 }
 .hero h1 {
-    font-size: 48px;
+    font-size: 50px;
     margin-bottom: 16px;
 }
 .hero p {
-    font-size: 18px;
+    font-size: 24px;
     color: #666;
     margin-bottom: 32px;
 }
@@ -132,7 +129,7 @@ nav a:hover {
 .grid {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1140px;
+    max-width: 1250px;
     margin: 0 auto;
     gap: 24px;
     padding: 0 20px 80px;
@@ -143,21 +140,21 @@ nav a:hover {
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     flex: 1;
-    min-width: 300px;
+    min-width: 350px;
 }
 .card h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 .card p {
-    font-size: 14px;
+    font-size: 20px;
     color: #666;
 }
 
 /* Table */
 
 .table-service {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -171,7 +168,7 @@ table {
 }
 th,td {
     padding: 20px;
-    font-size: 20px;
+    font-size: 22px;
     border-bottom: 1px solid black;
     text-align: left;
 }
@@ -180,6 +177,31 @@ thead {
 }
 tr:hover {
     background-color: #A78BFA;
+}
+
+.info-company {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 24px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.infotext {
+    font-size: 30px;
+    width: 1200px;
+    margin-bottom: 20px;
+}
+.info-service {
+    display: flex;
+    justify-content: space-between;
+}
+.info1, .info2, .info3, .info4 {
+    margin: 20px;
+    font-size: 26px;
+    min-width: 270px;
 }
 
 footer {
