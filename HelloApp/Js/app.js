@@ -1,9 +1,12 @@
 const express = require("express"); 
+const PORT = process.env.PORT || 3000
+const sequelize = require('./utils/database');
 const exphbs = require("express-handlebars");
 const app = express();
 const indexRoutes = require("./routes/index");
 const orderRoutes = require("./routes/order");
 const errRoutes = require("./routes/404");
+
 
 const hbs = exphbs.create({
 defaultLayout: 'main',
@@ -22,5 +25,13 @@ app.use('/',indexRoutes);
 app.use('/order',orderRoutes);
 app.use('/err',errRoutes);
 
+async function start() {
+    try {
+        await sequelize.sync()
+        app.listen(PORT)
+    } catch (error) {
+        console.log(error)
+    }
+}
 
-app.listen(3000);
+start()
