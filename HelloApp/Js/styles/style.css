@@ -29,6 +29,29 @@ button {
     }
 }
 
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes flash-highlight {
+    0% {
+        background-color: #7648ff;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+/* end */
+
 body {
     margin: 0;
     font-family: sf-pro-regular;
@@ -55,53 +78,42 @@ nav a {
     transition: 0.3s;
 }
 nav a:hover {
-    color: 	#4D7EFF;
+    color: 	#A78BFA;
 }
-/* .btn-black {
+.btn-blue {
     background-color: #1E2230;
     color: #ffffff;
     margin-left: 20px;
-    padding: 12px 18px;
+    padding: 12px 14px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     transition: 0.3s;
 }
-.btn-black:hover {
+.btn-blue:hover {
     background-color: #6B21A8;
+    color: #ffffff;
     box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
-} */
+}
 
 .btn-black { 
-        display: inline-block;
-        margin-top: 30px;
-        padding: 12px 28px;
-        background: linear-gradient(270deg, #8f5eff, #ff3cac, #2c1f54, #8f5eff);
-        background-size: 300% 300%;
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 10px;
-        transition: 0.3s ease;
-        animation: gradientFlow 5s ease infinite;
-        box-shadow: 0 0 12px rgba(143, 94, 255, 0.6);
-        font-size: 20px;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 28px;
+    background: linear-gradient(270deg, #8f5eff, #ff3cac, #2c1f54, #8f5eff);
+    background-size: 300% 300%;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    animation: gradientFlow 5s ease infinite;
+    box-shadow: 0 0 12px rgba(143, 94, 255, 0.6);
+    font-size: 20px;
 }
 .btn-black:hover {
     filter: brightness(1.2);
-}
-
-@keyframes gradientFlow {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 .hero {
@@ -117,15 +129,7 @@ nav a:hover {
     color: #666;
     margin-bottom: 32px;
 }
-.btn-blue {
-    background-color: #1E2230;
-    color: #ffffff;
-    padding: 16px 32px;
-    font-size: 16px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -212,187 +216,162 @@ footer {
     color: #666;
 }
 
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.contacts{
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: left;
+    padding: 20px;
+    border-radius: 15px;
+}
+.contacts a{
+    color: #A78BFA;
+}
+.contacts.flash {
+    animation: flash-highlight 5s ease;
+}
+
+footer a {
+    color: #A78BFA;
+}
+
+
 
 /* === Адаптив для мобильных устройств === */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 16px;
+        text-align: center;
     }
 
     nav {
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         gap: 12px;
     }
 
     nav a {
+        font-size: 18px;
         margin: 0;
+    }
+
+    .btn-blue {
         font-size: 16px;
+        width: 90%;
+        margin: 0 auto;
     }
 
     .hero {
-        padding: 60px 16px;
-    }
-    .hero h1 {
-        font-size: 36px;
-    }
-    .hero p {
-        font-size: 20px;
+        padding: 80px 16px;
     }
 
-    .btn-black {
-        font-size: 18px;
-        padding: 10px 24px;
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 22px;
     }
 
     .grid {
         flex-direction: column;
         padding: 0 16px 60px;
     }
+
     .card {
         min-width: auto;
         width: 100%;
     }
 
     .table-service {
-        padding: 30px 16px;
-    }
-
-    table {
-        font-size: 16px;
+        padding: 40px 16px;
     }
 
     th, td {
-        padding: 12px;
-        font-size: 18px;
+        padding: 14px;
+        font-size: 20px;
     }
 
     .info-company {
         padding: 16px;
-        margin-bottom: 60px;
+        margin-bottom: 80px;
     }
+
     .infotext {
-        font-size: 24px;
+        font-size: 26px;
         width: auto;
     }
+
     .info-service {
         flex-wrap: wrap;
-        gap: 12px;
-    }
-    .info1, .info2, .info3, .info4 {
-        margin: 10px 0;
-        font-size: 20px;
-        min-width: auto;
-        width: 100%;
-    }
-}
-
-/* === Адаптив для мобильных устройств === */
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
         gap: 16px;
     }
 
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    nav a {
-        margin: 0;
-        font-size: 16px;
-    }
-
-    .hero {
-        padding: 60px 16px;
-    }
-    .hero h1 {
-        font-size: 36px;
-    }
-    .hero p {
-        font-size: 20px;
-    }
-
-    .btn-black {
-        font-size: 18px;
-        padding: 10px 24px;
-    }
-
-    .grid {
-        flex-direction: column;
-        padding: 0 16px 60px;
-    }
-    .card {
-        min-width: auto;
-        width: 100%;
-    }
-
-    .table-service {
-        padding: 30px 16px;
-    }
-
-    table {
-        font-size: 16px;
-    }
-
-    th, td {
-        padding: 12px;
-        font-size: 18px;
-    }
-
-    .info-company {
-        padding: 16px;
-        margin-bottom: 60px;
-    }
-    .infotext {
-        font-size: 24px;
-        width: auto;
-    }
-    .info-service {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
     .info1, .info2, .info3, .info4 {
         margin: 10px 0;
-        font-size: 20px;
-        min-width: auto;
+        font-size: 22px;
         width: 100%;
     }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contacts p {
+        font-size: 14px;
+    }
 }
+
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
+
     .hero p {
         font-size: 18px;
     }
+
     .btn-black {
         font-size: 16px;
         padding: 10px 20px;
     }
+
     nav {
         flex-direction: column;
         align-items: flex-start;
     }
+
     nav a {
         font-size: 14px;
     }
+
     .infotext {
-        font-size: 20px;
+        font-size: 22px;
     }
+
     .info1, .info2, .info3, .info4 {
         font-size: 18px;
     }
+
     th, td {
         font-size: 16px;
         padding: 10px;
+    }
+
+    .contacts p {
+        font-size: 13px;
     }
 }
