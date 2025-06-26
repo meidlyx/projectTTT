@@ -290,6 +290,83 @@ footer {
     }
 }
 
+/* === Адаптив для мобильных устройств === */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .hero {
+        padding: 60px 16px;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero p {
+        font-size: 20px;
+    }
+
+    .btn-black {
+        font-size: 18px;
+        padding: 10px 24px;
+    }
+
+    .grid {
+        flex-direction: column;
+        padding: 0 16px 60px;
+    }
+    .card {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .table-service {
+        padding: 30px 16px;
+    }
+
+    table {
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .info-company {
+        padding: 16px;
+        margin-bottom: 60px;
+    }
+    .infotext {
+        font-size: 24px;
+        width: auto;
+    }
+    .info-service {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .info1, .info2, .info3, .info4 {
+        margin: 10px 0;
+        font-size: 20px;
+        min-width: auto;
+        width: 100%;
+    }
+}
+
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 28px;
@@ -317,8 +394,5 @@ footer {
     th, td {
         font-size: 16px;
         padding: 10px;
-    }
-    .city {
-        font-size: 20px;
     }
 }
