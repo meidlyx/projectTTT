@@ -1,6 +1,5 @@
 const express = require("express"); 
 const PORT = process.env.PORT || 3000
-const sequelize = require('./utils/database');
 const exphbs = require("express-handlebars");
 const app = express();
 const indexRoutes = require("./routes/index");
@@ -25,13 +24,4 @@ app.use('/',indexRoutes);
 app.use('/order',orderRoutes);
 app.use('/err',errRoutes);
 
-async function start() {
-    try {
-        await sequelize.sync()
-        app.listen(PORT)
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-start()
+app.listen(PORT)

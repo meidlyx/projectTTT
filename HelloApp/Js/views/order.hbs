@@ -242,33 +242,8 @@
         <a class="form-page-back" href="/">← Вернуться на главную</a>
         </div>
 
-        <div id="message-form" class="message-form">
-        <p>✅ Заявка успешно отправлена!</p>
-        </div>
     </main>
 
-<script>
-    document.getElementById('orderForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-    const formData = new FormData(this);
-
-    fetch('/order', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        if (response.ok) {
-        document.getElementById('message-form').style.display = 'block';
-        setTimeout(() => {
-            window.location.href = '/';
-        }, 5000);
-        } else {
-        alert('Произошла ошибка при отправке формы');
-        }
-    })
-    .catch(() => alert('Ошибка отправки на сервер'));
-    });
 </script>
 
 
