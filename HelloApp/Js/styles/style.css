@@ -183,6 +183,16 @@ tr:hover {
     background-color: #A78BFA;
 }
 
+#services {
+    text-align: center; 
+    font-size: 44px;
+}
+.ekb {
+    color: #A78BFA; 
+    cursor: pointer; 
+    font-family: sf-pro-bold;
+}
+
 .info-company {
     display: flex;
     justify-content: center;
