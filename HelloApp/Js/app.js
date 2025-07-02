@@ -5,7 +5,6 @@ const exphbs = require("express-handlebars");
 const indexRoutes = require("./routes/index");
 const orderRoutes = require("./routes/order");
 const errRoutes = require("./routes/404");
-const bodyParser = require('body-parser')
 const app = express();
 
 
