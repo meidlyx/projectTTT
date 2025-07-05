@@ -4,7 +4,7 @@
   <header>
       <div class="logo">HABIT<span class="z">Z</span></div>
       <nav>
-        <a class="btn-blue" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'});document.getElementById('contacts').classList.add('flash');setTimeout(()=>document.getElementById('contacts').classList.remove('flash'),2000)">Контакты</a>
+        <a class="btn-blue" id="contacts-btn">Контакты</a>
         <a href="order" class="btn-bl-ue">Оставить заявку на ремонт</a>
       </nav>
   </header>
@@ -12,7 +12,7 @@
   <section class="hero">
     <h1>Быстрый ремонт устройств Apple</h1>
     <p>от 290 ₽ · от 20 минут · бесплатная диагностика</p>
-    <a href="#" class="btn-black" onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth'})">Посмотреть услуги</a>
+    <button class="btn-black" id="scroll">Посмотреть услуги</button>
   </section>
 
   <section class="grid">
@@ -32,23 +32,23 @@
 
   <section class="info-company">
     <div class="infotext">
-      <h1 style="text-align: center;"><span style="font-family: TS;">HABITZ</span> — <span style="color: #A78BFA;">крупнейшая сервисная сеть</span> по ремонту устройств Apple в России</h1>
+      <h1><span class="logo">HABITZ</span> — <span>крупнейшая сервисная сеть</span> по ремонту устройств Apple в России</h1>
     </div>
     <div class="info-service">
       <div class="info1">
-        <p style="font-size: 32px; color: #A78BFA; font-family: sf-pro-bold">677</p>
+        <p class="info-service-text">677</p>
         <p>Сервисных центров</p>
       </div>
       <div class="info2">
-        <p style="font-size: 32px; color: #A78BFA; font-family: sf-pro-bold">2 МЛН</p>
+        <p class="info-service-text">2 МЛН</p>
         <p>Ремонтов в год</p>
       </div>
       <div class="info3">
-        <p style="font-size: 32px; color: #A78BFA; font-family: sf-pro-bold">90 дней</p>
+        <p class="info-service-text">90 дней</p>
         <p>Официальная гарантия</p>
       </div>
       <div class="info4">
-        <p style="font-size: 32px; color: #A78BFA; font-family: sf-pro-bold">4 года</p>
+        <p class="info-service-text">4 года</p>
         <p>Средний опыт инженера  </p>
       </div>
     </div>
@@ -60,20 +60,20 @@
     </div>
     <div class="info-service">
       <div class="info1">
-        <p style="font-size: 32px; color: #A78BFA; font-family: sf-pro-bold">12 404 шт</p>
-        <p style="font-size: 20px">Комплектующих на складе в повседневном доступе</p>
+        <p class="info-service-text">12 404 шт</p>
+        <p class="style-text-info">Комплектующих на складе в повседневном доступе</p>
       </div>
       <div class="info2">
-        <p style="font-size: 32px; color: #A78BFA; font-family: sf-pro-bold">91 год</p>
-        <p style="font-size: 20px">Суммарного опыта ремонта наших специалистов</p>
+        <p class="info-service-text">91 год</p>
+        <p class="style-text-info">Суммарного опыта ремонта наших специалистов</p>
       </div>
       <div class="info3">
-        <p style="font-size: 32px; color: #A78BFA; font-family: sf-pro-bold">35 мин</p>
-        <p style="font-size: 20px">Среднее время ремонтных работ по сумме обращений</p>
+        <p class="info-service-text">35 мин</p>
+        <p class="style-text-info">Среднее время ремонтных работ по сумме обращений</p>
       </div>
       <div class="info4">
-        <p style="font-size: 32px; color: #A78BFA; font-family: sf-pro-bold">5%</p>
-        <p style="font-size: 20px">Возвратов на гарантийный ремонт</p>
+        <p class="info-service-text">5%</p>
+        <p class="style-text-info">Возвратов на гарантийный ремонт</p>
       </div>
     </div>
   </section>
@@ -222,7 +222,7 @@
       <p>© 2025 HABITZ. Все права защищены.</p>
       <p><b>Время работы:</b> Пн–Вс с 10:00 до 21:00</p>
       <div class="contacts" id="contacts">
-        <b style="color: #807f7f;">Контакты</b>
+        <b>Контакты</b>
         <p><b>Телефон:</b> <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
         <p><b>Email:</b> <a href="mailto:info@apple-remont.ru">info@habitz-apple.ru</a></p>
         <p><b>Telegram:</b> <a href="https://t.me/no_morePeace">Habitz-поддержка</a></p>
@@ -231,6 +231,4 @@
     </div>
   </footer>
 
-  <script>
-    
-  </script>
+  <script src="styles/script/index.js"></script>

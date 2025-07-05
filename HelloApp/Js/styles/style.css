@@ -229,6 +229,15 @@ tr:hover {
     min-width: 270px;
 }
 
+.style-text-info {
+    font-size: 20px;
+}
+.info-service-text {
+    font-size: 32px; 
+    color: #A78BFA; 
+    font-family: sf-pro-bold;
+}
+
 footer {
     background-color: #000000;
     text-align: center;

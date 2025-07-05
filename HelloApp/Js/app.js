@@ -6,6 +6,7 @@ const indexRoutes = require("./routes/index");
 const orderRoutes = require("./routes/order");
 const errRoutes = require("./routes/404");
 const app = express();
+const path = require("path");
 
 
 const hbs = exphbs.create({
@@ -18,7 +19,7 @@ app.set('view engine','hbs')
 app.set ('views', 'views')
 
 
-app.use(express.static("styles"))
+app.use("/styles", express.static(path.join(__dirname, "styles")));
 
 
 app.use('/',indexRoutes);
