@@ -1,4 +1,4 @@
-console.log("JS загружен!");
+console.log("проверка js");
 
 document.addEventListener("DOMContentLoaded", () => {
   const contactsBtn = document.getElementById("contacts-btn");
@@ -24,6 +24,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-console.log("JS загружен!");
 
