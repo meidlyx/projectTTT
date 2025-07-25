@@ -1,15 +1,11 @@
 const {model, Schema} = require("mongoose")
 
 const database = new Schema({
-    title: {
-        type: String,
-        required: true
-    },
      name: {
         type: String,
         required: true
     },
-        devise: {
+        device: {
         type: String,
         required: true
     },
