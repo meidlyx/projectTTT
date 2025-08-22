@@ -81,6 +81,7 @@ header {
     align-items: center;
 }
 
+
 nav a {
     margin-left: 24px;
     text-decoration: none;
@@ -91,6 +92,8 @@ nav a {
 nav a:hover {
     color: 	#A78BFA;
 }
+
+
 .btn-blue {
     background-color: #1E2230;
     color: #ffffff;
@@ -108,28 +111,47 @@ nav a:hover {
     box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
 }
 
+
 .btn-black { 
     display: inline-block;
+    font-family: sf-pro-bold;
     margin-top: 30px;
     padding: 12px 28px;
-    background: linear-gradient(270deg, #8f5eff, #ff3cac, #2c1f54, #8f5eff);
-    background-size: 300% 300%;
+    background-color: #8f5eff;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 10px;
-    transition: 0.3s ease;
-    animation: gradientFlow 5s ease infinite;
-    box-shadow: 0 0 12px rgba(143, 94, 255, 0.6);
     font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(143, 94, 255, 0.6);
+    transition: background 0.3s;
 }
-.btn-black:hover {
-    filter: brightness(1.2);
+
+.btn-black::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #ff3cac;
+    transition: width 0.4s ease;
+    z-index: -1;
 }
+
+.btn-black:hover::before {
+    width: 100%;
+}
+
 
 .hero {
     text-align: center;
     padding: 100px 20px;
+    align-items: center;
 }
 .hero h1 {
     font-size: 50px;
@@ -139,6 +161,12 @@ nav a:hover {
     font-size: 24px;
     color: #666;
     margin-bottom: 32px;
+}
+
+.razdelit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .grid {
