@@ -2,12 +2,15 @@ const express = require("express");
 const PORT = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 const path = require("path");
+const cors = require("cors");
 
 const indexRoutes = require("./routes/index");
 const orderRoutes = require("./routes/order");
 const errRoutes = require("./routes/404");
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

@@ -23,7 +23,7 @@ const database = new Schema({
     },
         email: {
         type: String,
-        required: true
+        required: false
     }
 })
 
