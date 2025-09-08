@@ -9,7 +9,7 @@ export const create = async (req, res) => {
       phone: req.body.phone,
       problem: req.body.problem,
       email: req.body.email,
-      user: req.userId,
+      // user: req.userId,
     });
 
     const post = await doc.save();

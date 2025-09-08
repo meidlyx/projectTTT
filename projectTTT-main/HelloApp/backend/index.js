@@ -5,12 +5,12 @@ import mongoose from 'mongoose';
 import { registerValidation, loginValidation, postCreateValidation } from './validations.js';
 
 import checkAuth from './utils/checkAuth.js';
-
+import cors from 'cors';
 import * as UserController from './controllers/UserController.js';
 import * as PostController from './controllers/PostController.js';
 
 const app = express();
-
+app.use(cors());
 app.use(express.json());
 
 app.post('/auto/login', loginValidation, UserController.login);
@@ -21,7 +21,7 @@ app.get('/auto/me', checkAuth, UserController.getMe);
 
 // app.get('/auto/me', checkAuth, UserController.getMe);
 // app.get('/auto/me', checkAuth, UserController.getMe);
-app.post('/posts', checkAuth, postCreateValidation, PostController.create);
+app.post('/posts', postCreateValidation, PostController.create);
 // app.get('/auto/me', checkAuth, UserController.getMe);
 // app.get('/auto/me', checkAuth, UserController.getMe);
 
