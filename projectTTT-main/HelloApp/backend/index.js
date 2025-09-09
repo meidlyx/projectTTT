@@ -19,8 +19,8 @@ app.post('/auto/register', registerValidation, UserController.register);
 
 app.get('/auto/me', checkAuth, UserController.getMe);
 
-// app.get('/auto/me', checkAuth, UserController.getMe);
-// app.get('/auto/me', checkAuth, UserController.getMe);
+app.get('/posts', PostController.getAll);
+app.get('/posts/:model', PostController.getOne);
 app.post('/posts', postCreateValidation, PostController.create);
 // app.get('/auto/me', checkAuth, UserController.getMe);
 // app.get('/auto/me', checkAuth, UserController.getMe);
