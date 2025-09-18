@@ -1,11 +1,11 @@
-import { useState } from "react";
-import axios from "axios";
+import { useState } from 'react';
+import axios from 'axios';
 
 export default function FormAuth() {
   const [formData, setFormData] = useState({
-    fullname: "",
-    email: "",
-    password: "",
+    fullname: '',
+    email: '',
+    password: '',
   });
 
   const [isLogin, setIsLogin] = useState(true);
@@ -20,30 +20,30 @@ export default function FormAuth() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const url = isLogin
-      ? "http://localhost:3000/auto/login"
-      : "http://localhost:3000/auto/register";
+      ? 'http://localhost:3000/auto/login'
+      : 'http://localhost:3000/auto/register';
 
     try {
       const res = await axios.post(url, formData);
 
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("user", JSON.stringify(res.data));
+      localStorage.setItem('token', res.data.token);
+      localStorage.setItem('user', JSON.stringify(res.data));
 
-      alert(isLogin ? "Авторизация успешна!" : "Регистрация успешна!");
+      alert(isLogin ? 'Авторизация успешна!' : 'Регистрация успешна!');
 
-      window.location.href = "/";
+      window.location.href = '/';
     } catch (err) {
       if (err.response && err.response.data) {
         const data = err.response.data;
         if (Array.isArray(data)) {
-          alert(data.map((e) => e.msg).join("\n"));
+          alert(data.map((e) => e.msg).join('\n'));
         } else if (data.msg || data.massage) {
           alert(data.msg || data.massage);
         } else {
-          alert("Произошла неизвестная ошибка");
+          alert('Произошла неизвестная ошибка');
         }
       } else {
-        alert("Сервер не отвечает");
+        alert('Сервер не отвечает');
       }
     }
   };
@@ -51,15 +51,13 @@ export default function FormAuth() {
   return (
     <div className="form-page-wrapper">
       <div className="form-page-container">
-        <h1 className="form-page-title">
-          {isLogin ? "Войти в аккаунт" : "Создать аккаунт"}
-        </h1>
+        <h1 className="form-page-title">{isLogin ? 'Войти в аккаунт' : 'Создать аккаунт'}</h1>
 
         <form onSubmit={handleSubmit}>
           {!isLogin && (
             <>
               <label className="form-page-label" htmlFor="fullname">
-                ФИО
+                Nickname
               </label>
               <input
                 className="form-page-input"
@@ -87,7 +85,7 @@ export default function FormAuth() {
           />
 
           <label className="form-page-label" htmlFor="password">
-            Пароль
+            Password
           </label>
           <input
             className="form-page-input"
@@ -100,15 +98,14 @@ export default function FormAuth() {
           />
 
           <button className="btn-black2" type="submit">
-            {isLogin ? "🚀 Войти" : "🚀 Создать аккаунт"}
+            {isLogin ? '🚀 Войти' : '🚀 Создать аккаунт'}
           </button>
         </form>
 
         <p
-          style={{ marginTop: "16px", cursor: "pointer", color: "#A78BFA" }}
-          onClick={() => setIsLogin(!isLogin)}
-        >
-          {isLogin ? "Нет аккаунта? Создать" : "Уже есть аккаунт? Войти"}
+          style={{ marginTop: '16px', cursor: 'pointer', color: '#A78BFA' }}
+          onClick={() => setIsLogin(!isLogin)}>
+          {isLogin ? 'Нет аккаунта? Создать ' : 'Уже есть аккаунт? Войти'}
         </p>
       </div>
     </div>

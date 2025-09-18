@@ -22,8 +22,8 @@ app.get('/auto/me', checkAuth, UserController.getMe);
 app.get('/posts', PostController.getAll);
 app.get('/posts/:model', PostController.getOne);
 app.post('/posts', postCreateValidation, PostController.create);
-// app.get('/auto/me', checkAuth, UserController.getMe);
-// app.get('/auto/me', checkAuth, UserController.getMe);
+app.delete('/posts/:model', PostController.remove); //В разработке
+// app.update('/posts', PostController.update); //В разработке
 
 async function start() {
   try {

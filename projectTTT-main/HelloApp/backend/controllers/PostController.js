@@ -7,7 +7,7 @@ export const getAll = async (req, res) => {
     res.json(posts);
   } catch (err) {
     console.log(error);
-    return res.status(500).json({ message: 'Не удалось получить статью' });
+    return res.status(500).json({ message: 'Не удалось получить ' });
   }
 };
 
@@ -16,13 +16,36 @@ export const getOne = async (req, res) => {
     const posts = await PostModel.findOne({ model: req.body.model });
 
     if (!posts) {
-      return res.status(404).json({ message: 'Не удалось найти статью' });
+      return res.status(404).json({ message: 'Не удалось найти заявку' });
     }
 
     res.json(posts);
   } catch (error) {
-    console.log(e);
-    res.status(500).json({ message: 'Ошибка при нахождении статьи' });
+    console.log(err);
+    res.status(500).json({ message: 'Ошибка при нахождении заявки' });
+  }
+};
+
+export const remove = async (req, res) => {
+  try {
+    const posts = await PostModel.findOne({ model: req.body.model });
+
+    PostModel.findOneAndDelete({ model: req.body.model }, (err, doc) => {
+      if (err) {
+        console.log(err);
+        res.status(500).json({ message: 'Ошибка при удалении заявки' });
+      }
+
+      if (!doc) {
+        console.log(err);
+        res.status(404).json({ message: 'Заявка не найдена' });
+      }
+
+      res.json({ message: 'Заявка удалена' });
+    });
+  } catch (error) {
+    console.log(err);
+    res.status(500).json({ message: 'Ошибка при удалении заявки' });
   }
 };
 
