@@ -1,435 +1,547 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
-    box-sizing: border-box;
-    font-family: sf-pro-regular;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: sf-pro-regular;
 }
 
 button {
-    outline: none;
-    border: none;
+  outline: none;
+  border: none;
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
+  width: 0px;
 }
 
 /* Анимки */
 
 @keyframes appear {
-    from {
-        opacity: 0;
-        scale: 0.5;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
 @keyframes gradientFlow {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes flash-highlight {
-    0% {
-        background-color: #7648ff;
-    }
-    100% {
-        background-color: transparent;
-    }
+  0% {
+    background-color: #7648ff;
+  }
+  100% {
+    background-color: transparent;
+  }
 }
 
 /* end */
 
 .logo {
-    font-size: 30px; 
-    font-weight: bold; 
-    font-family: TS; 
-    color: #A78BFA;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: TS;
+  color: #a78bfa;
 }
 .z {
-    font-size: 36px; 
-    font-family: TS;
+  font-size: 36px;
+  font-family: TS;
 }
 
 body {
-    margin: 0;
-    font-family: sf-pro-regular;
-    background-color: #0B0F1A;
-    color: #F2F4F8;
-    scroll-behavior: inherit;
+  margin: 0;
+  font-family: sf-pro-regular;
+  background-color: #0b0f1a;
+  color: #f2f4f8;
+  scroll-behavior: inherit;
 }
 body p {
-    font-family: sf-pro-regular;
+  font-family: sf-pro-regular;
 }
 header {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 
 nav a {
-    margin-left: 24px;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
-    transition: 0.3s;
+  margin-left: 24px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  transition: 0.3s;
 }
 nav a:hover {
-    color: 	#A78BFA;
+  color: #a78bfa;
 }
-
 
 .btn-blue {
-    background-color: #1E2230;
-    color: #ffffff;
-    margin-left: 20px;
-    padding: 12px 14px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
+  background-color: #1e2230;
+  color: #ffffff;
+  margin-left: 20px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
 }
 .btn-blue:hover {
-    background-color: #6B21A8;
-    color: #ffffff;
-    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
+  background-color: #6b21a8;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
 }
 
-
-.btn-black { 
-    display: inline-block;
-    font-family: sf-pro-bold;
-    margin-top: 30px;
-    padding: 12px 28px;
-    background-color: #8f5eff;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 0 12px rgba(143, 94, 255, 0.6);
-    transition: background 0.3s;
+.btn-black {
+  display: inline-block;
+  font-family: sf-pro-bold;
+  margin-top: 30px;
+  padding: 12px 28px;
+  background-color: #8f5eff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(143, 94, 255, 0.6);
+  transition: background 0.3s;
 }
 
 .btn-black::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: #ff3cac;
-    transition: width 0.4s ease;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ff3cac;
+  transition: width 0.4s ease;
+  z-index: -1;
 }
 
 .btn-black:hover::before {
-    width: 100%;
+  width: 100%;
 }
-
 
 .hero {
-    text-align: center;
-    padding: 100px 20px;
-    align-items: center;
+  text-align: center;
+  padding: 100px 20px;
+  align-items: center;
 }
 .hero h1 {
-    font-size: 50px;
-    margin-bottom: 16px;
+  font-size: 50px;
+  margin-bottom: 16px;
 }
 .hero p {
-    font-size: 24px;
-    color: #666;
-    margin-bottom: 32px;
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 32px;
 }
 
 .razdelit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1250px;
-    margin: 0 auto;
-    gap: 24px;
-    padding: 0 20px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1250px;
+  margin: 0 auto;
+  gap: 24px;
+  padding: 0 20px 80px;
 }
 .card {
-    background-color: #12141C;
-    padding: 24px;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    flex: 1;
-    min-width: 350px;
+  background-color: #12141c;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 350px;
 }
 .card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 .card p {
-    font-size: 20px;
-    color: #666;
+  font-size: 20px;
+  color: #666;
 }
-
-/* Table */
 
 .table-service {
-    max-width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
 }
 table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #12141C;
-    border-radius: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #12141c;
+  border-radius: 20px;
 }
-th,td {
-    padding: 20px;
-    font-size: 22px;
-    border-bottom: 1px solid black;
-    text-align: left;
+th,
+td {
+  padding: 20px;
+  font-size: 22px;
+  border-bottom: 1px solid black;
+  text-align: left;
 }
 thead {
-    pointer-events: none;
+  pointer-events: none;
 }
 tr:hover {
-    background-color: #A78BFA;
+  background-color: #a78bfa;
 }
 
 #services {
-    text-align: center; 
-    font-size: 44px;
+  text-align: center;
+  font-size: 44px;
 }
 .ekb {
-    color: #A78BFA; 
-    cursor: pointer; 
-    font-family: sf-pro-bold;
+  color: #a78bfa;
+  cursor: pointer;
+  font-family: sf-pro-bold;
 }
 
 .info-company {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 24px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 24px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 .infotext {
-    font-size: 30px;
-    width: 1200px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  width: 1200px;
+  margin-bottom: 20px;
 }
 .info-service {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
-.info1, .info2, .info3, .info4 {
-    margin: 20px;
-    font-size: 26px;
-    min-width: 270px;
+.info1,
+.info2,
+.info3,
+.info4 {
+  margin: 20px;
+  font-size: 26px;
+  min-width: 270px;
 }
 
 .style-text-info {
-    font-size: 20px;
+  font-size: 20px;
 }
 .info-service-text {
-    font-size: 32px; 
-    color: #A78BFA; 
-    font-family: sf-pro-bold;
+  font-size: 32px;
+  color: #a78bfa;
+  font-family: sf-pro-bold;
 }
 
 footer {
-    background-color: #000000;
-    text-align: center;
-    padding: 24px;
-    font-size: 14px;
-    color: #666;
+  background-color: #000000;
+  text-align: center;
+  padding: 24px;
+  font-size: 14px;
+  color: #666;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
-.contacts{
-    text-decoration: none;
-    transition: 0.3s;
-    text-align: left;
-    padding: 20px;
-    border-radius: 15px;
+.contacts {
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: left;
+  padding: 20px;
+  border-radius: 15px;
 }
-.contacts a{
-    color: #A78BFA;
+.contacts a {
+  color: #a78bfa;
 }
 .contacts.flash {
-    animation: flash-highlight 5s ease;
+  animation: flash-highlight 5s ease;
 }
 
 footer a {
-    color: #A78BFA;
+  color: #a78bfa;
 }
 
+.profile-page {
+  padding: 80px 10%;
+  color: #fff;
+  height: 700px;
+}
 
+.profile-name {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #fff;
+}
 
-/* === Адаптив для мобильных устройств === */
+.profile-text {
+  font-size: 22px;
+  margin: 15px 0;
+  color: #ccc;
+}
 
+.btn-profile {
+  margin-top: 40px;
+  padding: 14px 32px;
+  border-radius: 10px;
+  background: #2d89ef;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-profile:hover {
+  background: #1b65c1;
+}
+
+.btn-acc {
+  color: blue;
+  background-color: none;
+}
+
+/* === Адаптивка === */
 @media (max-width: 1024px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        text-align: center;
-    }
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+  }
 
-    nav {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
+  .logo {
+    font-size: 26px;
+  }
 
-    nav a {
-        font-size: 18px;
-        margin: 0;
-    }
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
 
-    .btn-blue {
-        font-size: 16px;
-        width: 90%;
-        margin: 0 auto;
-    }
+  nav a {
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 14px;
+    background: #1e2230;
+    border-radius: 8px;
+    text-align: center;
+  }
 
-    .hero {
-        padding: 80px 16px;
-    }
+  .btn-blue {
+    font-size: 16px;
+    width: auto;
+    margin: 0;
+  }
 
-    .hero h1 {
-        font-size: 42px;
-    }
+  .hero {
+    padding: 80px 16px;
+  }
 
-    .hero p {
-        font-size: 22px;
-    }
+  .hero h1 {
+    font-size: 42px;
+  }
 
-    .grid {
-        flex-direction: column;
-        padding: 0 16px 60px;
-    }
+  .hero p {
+    font-size: 22px;
+  }
 
-    .card {
-        min-width: auto;
-        width: 100%;
-    }
+  .razdelit {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
 
-    .table-service {
-        padding: 40px 16px;
-    }
+  .grid {
+    flex-direction: column;
+    padding: 0 16px 60px;
+    gap: 20px;
+  }
 
-    th, td {
-        padding: 14px;
-        font-size: 20px;
-    }
+  .card {
+    min-width: auto;
+    width: 100%;
+  }
 
-    .info-company {
-        padding: 16px;
-        margin-bottom: 80px;
-    }
+  .table-service {
+    padding: 40px 16px;
+  }
 
-    .infotext {
-        font-size: 26px;
-        width: auto;
-    }
+  th,
+  td {
+    padding: 14px;
+    font-size: 20px;
+  }
 
-    .info-service {
-        flex-wrap: wrap;
-        gap: 16px;
-    }
+  .info-company {
+    padding: 16px;
+    margin-bottom: 80px;
+  }
 
-    .info1, .info2, .info3, .info4 {
-        margin: 10px 0;
-        font-size: 22px;
-        width: 100%;
-    }
+  .infotext {
+    font-size: 26px;
+    width: auto;
+  }
 
-    .footer-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .info-service {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
 
-    .contacts p {
-        font-size: 14px;
-    }
+  .info1,
+  .info2,
+  .info3,
+  .info4 {
+    margin: 10px 0;
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contacts p {
+    font-size: 14px;
+  }
 }
-
 
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 32px;
-    }
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+  }
 
-    .hero p {
-        font-size: 18px;
-    }
+  .logo {
+    font-size: 22px;
+  }
 
-    .btn-black {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
+  nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
 
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  nav a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
 
-    nav a {
-        font-size: 14px;
-    }
+  .hero {
+    padding: 60px 16px;
+  }
 
-    .infotext {
-        font-size: 22px;
-    }
+  .hero h1 {
+    font-size: 32px;
+  }
 
-    .info1, .info2, .info3, .info4 {
-        font-size: 18px;
-    }
+  .hero p {
+    font-size: 18px;
+  }
 
-    th, td {
-        font-size: 16px;
-        padding: 10px;
-    }
+  .razdelit {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
 
-    .contacts p {
-        font-size: 13px;
-    }
+  .btn-black {
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .grid {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 16px 40px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .table-service {
+    padding: 30px 16px;
+  }
+
+  th,
+  td {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .info-company {
+    padding: 0 16px 40px;
+  }
+
+  .infotext {
+    font-size: 22px;
+  }
+
+  .info-service {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .info1,
+  .info2,
+  .info3,
+  .info4 {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .contacts p {
+    font-size: 13px;
+  }
 }

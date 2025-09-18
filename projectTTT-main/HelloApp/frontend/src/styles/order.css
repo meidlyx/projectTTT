@@ -114,6 +114,7 @@
             font-family: sf-pro-medium;
             color: #aaa;
             text-decoration: underline;
+            background-color: transparent;
         }
 
         .form-page-back:hover {

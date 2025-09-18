@@ -46,7 +46,7 @@ export default function OrderPage() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Иван"
+            placeholder="Введите имя"
             required
           />
 
