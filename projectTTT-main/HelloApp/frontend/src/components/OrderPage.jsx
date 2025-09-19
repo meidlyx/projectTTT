@@ -21,7 +21,7 @@ export default function OrderPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/posts', formData);
+      const res = await axios.post('http://localhost:3000/order', formData);
       alert('Заявка отправлена');
       setFormData({ name: '', device: '', model: '', phone: '', problem: '', email: '' });
     } catch (err) {

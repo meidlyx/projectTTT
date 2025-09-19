@@ -54,14 +54,14 @@ export const login = async (req, res) => {
 
     if (!user) {
       return res.status(404).json({
-        massage: 'Ошибка Аворизации',
+        massage: 'Ошибка Авторизации',
       });
     }
     const isValidPass = await bcrypt.compare(req.body.password, user._doc.PasswordHash);
 
     if (!isValidPass) {
       return res.status(400).json({
-        massage: 'неверный логин или пароль',
+        massage: 'Неверный логин или пароль',
       });
     }
 

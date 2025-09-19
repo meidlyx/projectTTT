@@ -11,7 +11,7 @@ export const loginValidation = [
   body('password', 'Пароль указано неверно').isLength({ min: 5 }),
 ];
 
-export const postCreateValidation = [
+export const OrderCreateValidation = [
   body('name', 'Имя указано не верно').isLength({ min: 3 }),
   body('devise', 'Наименование девайса некоректно').isLength({ min: 3 }),
   body('model', 'Наименование модели некорректно').isLength({ min: 3 }),

@@ -1,10 +1,10 @@
-import PostModel from '../models/Posts.js';
+import OrderModel from '../models/order.js';
 
 export const getAll = async (req, res) => {
   try {
-    const posts = await PostModel.find();
+    const order = await OrderModel.find();
 
-    res.json(posts);
+    res.json(order);
   } catch (err) {
     console.log(error);
     return res.status(500).json({ message: 'Не удалось получить ' });
@@ -13,13 +13,13 @@ export const getAll = async (req, res) => {
 
 export const getOne = async (req, res) => {
   try {
-    const posts = await PostModel.findOne({ model: req.body.model });
+    const order = await OrderModel.findOne({ model: req.body.model });
 
-    if (!posts) {
+    if (!order) {
       return res.status(404).json({ message: 'Не удалось найти заявку' });
     }
 
-    res.json(posts);
+    res.json(order);
   } catch (error) {
     console.log(err);
     res.status(500).json({ message: 'Ошибка при нахождении заявки' });
@@ -28,9 +28,7 @@ export const getOne = async (req, res) => {
 
 export const remove = async (req, res) => {
   try {
-    const posts = await PostModel.findOne({ model: req.body.model });
-
-    PostModel.findOneAndDelete({ model: req.body.model }, (err, doc) => {
+    OrderModel.findOneAndDelete({ model: req.body.model }, (err, doc) => {
       if (err) {
         console.log(err);
         res.status(500).json({ message: 'Ошибка при удалении заявки' });
@@ -51,7 +49,7 @@ export const remove = async (req, res) => {
 
 export const create = async (req, res) => {
   try {
-    const doc = new PostModel({
+    const doc = new OrderModel({
       name: req.body.name,
       device: req.body.device,
       model: req.body.model,
@@ -61,9 +59,9 @@ export const create = async (req, res) => {
       // user: req.userId,
     });
 
-    const post = await doc.save();
+    const order = await doc.save();
 
-    res.json(post);
+    res.json(order);
   } catch (e) {
     console.log(e);
     res.status(500).json({ message: 'Ошибка при сохранении' });

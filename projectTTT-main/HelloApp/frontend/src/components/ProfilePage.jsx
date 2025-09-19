@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function ProfilePage() {
   const [user, setUser] = useState(null);
   const [ordersCount, setOrdersCount] = useState(0);
 
   useEffect(() => {
-    const stored = localStorage.getItem("user");
+    const stored = localStorage.getItem('user');
     if (stored) {
       setUser(JSON.parse(stored));
     }
 
     const fetchOrders = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/posts");
+        const res = await axios.get('http://localhost:3000/order');
         setOrdersCount(res.data.length);
       } catch (err) {
         console.error(err);
@@ -24,9 +24,9 @@ export default function ProfilePage() {
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem("user");
-    localStorage.removeItem("token");
-    window.location.href = "/";
+    localStorage.removeItem('user');
+    localStorage.removeItem('token');
+    window.location.href = '/';
   };
 
   if (!user) {

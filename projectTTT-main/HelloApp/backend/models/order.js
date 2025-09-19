@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const PostSchema = new mongoose.Schema({
+const OrderSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -32,4 +32,4 @@ const PostSchema = new mongoose.Schema({
   // },
 });
 
-export default mongoose.model('Post', PostSchema);
+export default mongoose.model('Order', OrderSchema);

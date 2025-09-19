@@ -2,12 +2,12 @@ import express from 'express';
 
 import mongoose from 'mongoose';
 
-import { registerValidation, loginValidation, postCreateValidation } from './validations.js';
+import { registerValidation, loginValidation, OrderCreateValidation } from './validations.js';
 
 import checkAuth from './utils/checkAuth.js';
 import cors from 'cors';
 import * as UserController from './controllers/UserController.js';
-import * as PostController from './controllers/PostController.js';
+import * as OrderController from './controllers/OrderController.js';
 
 const app = express();
 app.use(cors());
@@ -19,11 +19,11 @@ app.post('/auto/register', registerValidation, UserController.register);
 
 app.get('/auto/me', checkAuth, UserController.getMe);
 
-app.get('/posts', PostController.getAll);
-app.get('/posts/:model', PostController.getOne);
-app.post('/posts', postCreateValidation, PostController.create);
-app.delete('/posts/:model', PostController.remove); //В разработке
-// app.update('/posts', PostController.update); //В разработке
+app.get('/order', OrderController.getAll);
+app.get('/order/:model', OrderController.getOne);
+app.post('/order', OrderCreateValidation, OrderController.create);
+app.delete('/order/:model', OrderController.remove); //В разработке
+// app.update('/order', OrderController.update); //В разработке
 
 async function start() {
   try {
